@@ -9,7 +9,7 @@
 
     # Step 2.3: Initialize the Kubernetes cluster with kubeadm using the below code (applicable only on master node).
     - name: Initialize the Kubernetes cluster using kubeadm
-      command: kubeadm init --apiserver-advertise-address="192.168.50.10" --apiserver-cert-extra-sans="192.168.50.10"  --node-name master --pod-network-cidr=172.16.0.0/16
+      command: kubeadm init --apiserver-advertise-address="192.168.50.10" --apiserver-cert-extra-sans="192.168.50.10" --node-name master --pod-network-cidr=192.168.112.0/20
       when: installed is changed
 
     # Step 2.4: Setup the kube config file for the vagrant user to access the Kubernetes cluster using the below code.
@@ -31,7 +31,7 @@
     # Step 2.5: Setup the container networking provider and the network policy engine using the below code.
     - name: Install calico pod network
       become: false
-      command: kubectl apply -f https://docs.projectcalico.org/v3.12/manifests/calico.yaml
+      command: kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 
     # Step 2.6: Generate kube join command for joining the node to the Kubernetes cluster and store the command in the file named join-command.
     - name: Generate join command

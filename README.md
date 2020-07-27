@@ -24,5 +24,6 @@
 
 ## Referencias
 
-- [Tutorial](https://kubernetes.io/blog/2019/03/15/kubernetes-setup-using-ansible-and-vagrant/)
-- [Otro tutorial](https://graspingtech.com/create-kubernetes-cluster/)
+- [Kubernetes Setup Using Ansible and Vagrant](https://kubernetes.io/blog/2019/03/15/kubernetes-setup-using-ansible-and-vagrant/)
+- [Using Ansible to Create a Kubernetes Cluster on a Virtual Lab](https://graspingtech.com/create-kubernetes-cluster/)
+- [Creación de un Clúster de Kubernetes usando Vagrant y Ansible en 3 minutos](https://www.itwonderlab.com/es/cluster-kubernetes-vagrant-ansible/)
